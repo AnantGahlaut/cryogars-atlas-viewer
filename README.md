@@ -36,3 +36,7 @@ Local-machine paths are redacted from public lineage records. Original record an
 recipe digests are retained explicitly as pre-redaction identities, not checksums
 of the redacted records. Scientific arrays and application code are unchanged by
 publication packaging.
+
+Color editor performance update (2026-09-22): palette and contrast edits retain
+uploaded data, redraws are coalesced, and unchanged scenes display an idle status.
+Scientific exports and their documented limitations are unchanged.
