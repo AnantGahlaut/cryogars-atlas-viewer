@@ -6,37 +6,35 @@ Browser-ready research preview of LiDAR and UAVSAR observations across eight
 SnowEx field sites. No installation or HDF5 download is required. A modern
 WebGL-capable browser is needed; desktop viewing is recommended.
 
-This repository distributes the September 22, 2026 viewer update, not the full-resolution
-HDF5 archive or the development pipeline. The sampled display grid differs from
-the archive's 3 m analysis grid. Read the product information panels for methods
-and limitations before quantitative use.
+This repository distributes the **v1.0.05** viewer (2026-10-08), not the
+full-resolution HDF5 archive or the development pipeline. The sampled display
+grid differs from the archive's 3 m analysis grid. Read the product information
+panels for methods and limitations before quantitative use.
 
 GeoTIFF comparisons and PNG exports run in your browser. Imported files are not
 uploaded to this website.
 
 Created by Anant Gahlaut at [CryoGARS](https://github.com/cryogars), Boise State
-University. Source observations retain their original attribution and use
-requirements. A project code license has not yet been selected.
+University, with HP Marshall. Code is MIT licensed in the
+[source repository](https://github.com/AnantGahlaut/cryogars-atlas), which also
+rebuilds the full archive from NASA with `get_dataset.py`. Source observations
+retain their original attribution and use requirements.
 
-## Current viewer update
+## v1.0.05 viewer
 
-All eight explorers were freshly exported from the existing archives and validated,
-covering 1,664 layers. The update includes expanded product notes and methods,
-Detail-based Cells averaging, Smooth mode, live stored/shown validity explanations,
-coherence-mask fraction/binary controls with an adjustable cutoff, and corrected
-radar dates, flight-line labels, angle units and stretch descriptions.
+All eight explorers were exported from the corrected enrichment 3.3.0 archives,
+covering 1,664 layers. Aspect now points downhill (it was reflected
+north–south), terrain and canopy derivatives use the cleaned inputs, and radar
+incidence uses the viewed side and projected flight heading. Snow depth,
+vegetation height, elevation and all radar channels are unchanged. Viewer code
+is unchanged from the previous update. See the
+[rebuild record](https://github.com/AnantGahlaut/cryogars-atlas/blob/main/docs/reviews/2026-10-05-archive-rebuild-3.3.0.md).
 
-Scientific archives were not repaired in this update. Historical aspect still
-has a north/south reflection; circular display averaging does not correct that
-stored convention. Derivative-input, approximate incidence/height-reference and
-archive-metadata limitations remain documented in the product notes. Backup-dependent
-archive repairs and the final scientific archive release are pending.
+Radar geometry remains approximate and other documented limitations still apply;
+see the product notes and the
+[design document](https://github.com/AnantGahlaut/cryogars-atlas/blob/main/docs/design.md).
 
-Local-machine paths are redacted from public lineage records. Original record and
-recipe digests are retained explicitly as pre-redaction identities, not checksums
-of the redacted records. Scientific arrays and application code are unchanged by
-publication packaging.
-
-Color editor performance update (2026-09-22): palette and contrast edits retain
-uploaded data, redraws are coalesced, and unchanged scenes display an idle status.
-Scientific exports and their documented limitations are unchanged.
+Local-machine and cluster paths are redacted from public lineage records.
+Original record and recipe digests are retained explicitly as pre-redaction
+identities, not checksums of the redacted records. Scientific arrays and
+application code are unchanged by publication packaging.
